@@ -3,3 +3,4 @@ pandas==2.2.3
 numpy==2.2.2
 scikit-learn==1.6.1
 requests==2.31.0  # Use the correct package name
+flask-cors

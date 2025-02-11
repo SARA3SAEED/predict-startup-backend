@@ -13,7 +13,7 @@ model=pickle.load(open('models/model.pkl','rb'))
 scaler=pickle.load(open('models/scaler.pkl','rb'))
 
 
-@app.route('/predict', methods=['POST','GET'])
+@app.route('/', methods=['POST','GET'])
 def prediction_fun():
     if request.method == 'POST':
         rd_spend = float(request.form['rdSpend'])
@@ -38,9 +38,6 @@ def encode_state(state):
         return [0, 0]  
 
 
-@app.route('/', methods=['GET'])
-def home():
-    return render_template('index.html')
 
 if __name__ == '__main__':
-    app.run(host="0.0.0.0" , port=8081)
+    app.run(host="0.0.0.0" , port=8080)
