@@ -24,7 +24,7 @@ def encode_state(state):
 # def home():
 #     return jsonify({"message": "Welcome to the prediction API. Use POST to make predictions."})
 
-@app.route('/', methods=['POST'])
+@app.route('/', methods=['POST','GET'])
 def prediction_fun():
     data = request.get_json()
     rd_spend = float(data['rdSpend'])
