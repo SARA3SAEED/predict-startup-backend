@@ -20,9 +20,9 @@ def encode_state(state):
     else:  
         return [0, 0]  
 
-@app.route('/', methods=['GET'])
-def home():
-    return jsonify({"message": "Welcome to the prediction API. Use POST to make predictions."})
+# @app.route('/', methods=['GET'])
+# def home():
+#     return jsonify({"message": "Welcome to the prediction API. Use POST to make predictions."})
 
 @app.route('/', methods=['POST'])
 def prediction_fun():
